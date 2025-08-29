@@ -1,13 +1,99 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+/* Custom styles starts from here */
+
+.bg-main-background {
+    min-height: 100vh;
+    height: 100%;
+    background-image: url('../public/images/background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.nav-link {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 700;
+    transition:
+        box-shadow 0.3s cubic-bezier(.4, 2, .6, 1),
+        background 0.3s,
+        color 0.3s;
+    border-radius: 0.5rem;
+    margin: 0 0.25rem;
+    color: #5c5b5b !important;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: #1A26A4 !important;
+}
+
+.mission-card,
+.vision-card {
+    background: #3e6e9e;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.team-card {
+    width: 500px;
+    height: 350px;
+    margin: 50 auto;
+    border-radius: 2rem;
+    color: #000000;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.team-card-img {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #fff;
+    transition: box-shadow 0.3s;
+}
+
+.team-card-img:hover {
+    box-shadow: 0 0 0 8px rgba(14, 13, 13, 0.3);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #949090 !important;
+    border-radius: 20%;
+}
+
+.contact-card {
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 2rem;
+    color: #000000;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.contact-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    color: #1A26A4;
+    text-decoration: underline;
 }
