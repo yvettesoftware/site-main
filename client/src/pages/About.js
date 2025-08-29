@@ -1,5 +1,51 @@
 import React from 'react';
+import Carousel from 'react-bootstrap/Carousel'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+const teamMembers = [
+    {
+        name: "Isaiah Irwin",
+        title: "Founder, CEO & Visionary",
+        desc: "Driving Innovation & Vision from Real-World Property Experience.",
+        img: "/images/team/isaiah.jpeg"
+    },
+    {
+        name: "Nathaniel Irwin",
+        title: "Co-Founder, CEO & Executive Management",
+        desc: "Orchestrating Execution Operations and Team Alignment.",
+        img: "/images/team/nat.jpeg"
+    },
+    {
+        name: "Lucas Mireles",
+        title: "Co-Founder & Chief Revenue Officer",
+        desc: "Building Partnerships & Bringing Products/Services to the Market.",
+        img: "/images/team/lucas.jpeg"
+    },
+    {
+        name: "Colton French",
+        title: "Co-Founder & Chief Operating Officer",
+        desc: "Orchestrating Execution & Maintaining Efficiency Company Wide.",
+        img: "/images/team/colton.jpeg"
+    },
+    {
+        name: "Zavier Vann",
+        title: "Director of Customer Success",
+        desc: "Turning Engagement Into Long-Term Loyalty & Value.",
+        img: "/images/team/zavier.jpeg"
+    },
+    {
+        name: "Talin Kemp",
+        title: "Co-Director of Customer Success",
+        desc: "Building Trust & Growth Through Resident-Centered Solutions.",
+        img: "/images/team/talin.jpeg"
+    },
+    {
+        name: "Rohit Reddy Somireddy",
+        title: "Chief Technology Officer & Lead Developer",
+        desc: "Leading Software Development with Passion & Precision.",
+        img: "/images/team/rohit.jpg"
+    }
+];
 
 function About() {
     return (
@@ -19,120 +65,31 @@ function About() {
             </div>
 
             <div className="container d-flex flex-column align-items-center justify-content-center">
-                <h1>Meet the Visionaries Behind Yvette</h1>
-                {/* Team Section */}
-                <div className="container mt-2">
-                    <div className="row">
-                        <div className="col-12 d-flex justify-content-center">
-                            <div id="teamCarousel" className="carousel slide" data-bs-ride="carousel">
-                                {/* Team Member 1 */}
-                                <div className="carousel-item active">
-                                    <div className="card text-center shadow-lg team-card">
-                                        <img src="images/team/isaiah.jpeg"
-                                            className="team-card-img mx-auto d-block mt-3 rounded-circle" />
-                                        <div className="card-body">
-                                            <h5 className="card-title">Isaiah Irwin</h5>
-                                            <h6 className="card-subtitle mb-2 text-muted">Founder, CEO & Visionary</h6>
-                                            <p className="card-text">Driving Innovation & Vision from Real-World Property
-                                                Experience.</p>
-                                        </div>
+                <h1 className="m-4">Meet the Visionaries Behind Yvette</h1>
+                {/* Team Carousel */}
+                <div style={{ maxWidth: 500}}>
+                    <Carousel>
+                        {teamMembers.map((member, idx) => (
+                            <Carousel.Item key={idx}>
+                                <div className="card text-center team-card">
+                                    <img
+                                        src={member.img}
+                                        className="team-card-img mx-auto d-block mt-3 rounded-circle"
+                                        alt={member.name}
+                                        style={{ width: 200, height: 200, objectFit: 'cover' }}
+                                    />
+                                    <div className="card-body">
+                                        <h5 className="card-title">{member.name}</h5>
+                                        <h6 className="card-subtitle text-muted">{member.title}</h6>
+                                        <p className="card-text mb-3">{member.desc}</p>
                                     </div>
                                 </div>
-                                {/* Team Member 2 */}
-                                <div className="carousel-item">
-                                    <div className="card text-center shadow-lg team-card">
-                                        <img src="images/team/nat.jpeg"
-                                            className="team-card-img mx-auto d-block mt-3 rounded-circle" />
-                                        <div className="card-body">
-                                            <h5 className="card-title">Nathaniel Irwin</h5>
-                                            <h6 className="card-subtitle mb-2 text-muted">Co-Founder, CEO & Executive Management
-                                            </h6>
-                                            <p className="card-text">Orchestrating Execution Operations and Team Alignment.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* Team Member 3 */}
-                                <div className="carousel-item">
-                                    <div className="card text-center shadow-lg team-card">
-                                        <img src="images/team/lucas.jpeg"
-                                            className="team-card-img mx-auto d-block mt-3 rounded-circle" />
-                                        <div className="card-body">
-                                            <h5 className="card-title">Lucas Mireles</h5>
-                                            <h6 className="card-subtitle mb-2 text-muted">Co-Founder & Chief Revenue Officer
-                                            </h6>
-                                            <p className="card-text">Building Partnerships & Bringing Products/Services to the
-                                                Market.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* Team Member 4 */}
-                                <div className="carousel-item">
-                                    <div className="card text-center shadow-lg team-card">
-                                        <img src="images/team/colton.jpeg"
-                                            className="team-card-img mx-auto d-block mt-3 rounded-circle" />
-                                        <div className="card-body">
-                                            <h5 className="card-title">Colton French</h5>
-                                            <h6 className="card-subtitle mb-2 text-muted">Co-Founder & Chief Operating Officer
-                                            </h6>
-                                            <p className="card-text">Orchestrating Execution & Maintaining Efficiency Company
-                                                Wide.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* Team Member 5 */}
-                                <div className="carousel-item">
-                                    <div className="card text-center shadow-lg team-card">
-                                        <img src="images/team/zavier.jpeg"
-                                            className="team-card-img mx-auto d-block mt-3 rounded-circle" />
-                                        <div className="card-body">
-                                            <h5 className="card-title">Zavier Vann</h5>
-                                            <h6 className="card-subtitle mb-2 text-muted">Director of Customer Success</h6>
-                                            <p className="card-text">Turning Engagement Into Long-Term Loyalty & Value.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* Team Member 6 */}
-                                <div className="carousel-item">
-                                    <div className="card text-center shadow-lg team-card">
-                                        <img src="images/team/talin.jpeg"
-                                            className="team-card-img mx-auto d-block mt-3 rounded-circle" />
-                                        <div className="card-body">
-                                            <h5 className="card-title">Talin Kemp</h5>
-                                            <h6 className="card-subtitle mb-2 text-muted">Co-Director of Customer Success</h6>
-                                            <p className="card-text">Building Trust & Growth Through Resident-Centered
-                                                Solutions.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* Team Member 7 */}
-                                <div className="carousel-item">
-                                    <div className="card text-center shadow-lg team-card">
-                                        <img src="images/team/rohit.jpg"
-                                            className="team-card-img mx-auto d-block mt-3 rounded-circle" />
-                                        <div className="card-body">
-                                            <h5 className="card-title">Rohit Reddy Somireddy</h5>
-                                            <h6 className="card-subtitle mb-2 text-muted">Chief Technology Officer & Lead
-                                                Developer</h6>
-                                            <p className="card-text">Leading Software Development with Passion & Precision.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* Carousel controls */}
-                                <button className="carousel-control-prev" role="button" data-bs-target="#teamCarousel"
-                                    data-bs-slide="prev">
-                                    <span className="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
-                                </button>
-                                <button className="carousel-control-next" role="button" data-bs-target="#teamCarousel"
-                                    data-bs-slide="next">
-                                    <span className="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                            </Carousel.Item>
+                        ))}
+                    </Carousel>
                 </div>
 
-                <p className="lead text-center mb-4">
+                <p className="lead text-center m-4">
                     Discover our mission, vision, and team - watch our story unfold in the video below!
                 </p>
                 <div className="ratio ratio-16x9 mb-4" style={{ maxWidth: 800, width: '100%' }}>

@@ -1,4 +1,6 @@
 body {
+    min-height: 100vh;
+    height: 100%;
     background-image: url('../public/images/background.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -43,20 +45,21 @@ body {
     -webkit-backdrop-filter: blur(10px);
 }
 
-.team-card:hover {
-    transform: scale(1.10);
-}
-
 .team-card-img {
     width: 200px;
     height: 200px;
-    margin-top: 2rem;
     border: 5px solid #fff;
     transition: box-shadow 0.3s;
 }
 
 .team-card-img:hover {
     box-shadow: 0 0 0 8px rgba(14, 13, 13, 0.3);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #949090 !important;
+    border-radius: 20%;
 }
 
 .contact-card {
