@@ -1,25 +1,9 @@
-import React from 'react';
+import Navigation from '../components/Navigation';
 
 function Home() {
     return (
-        <div className="container mt-4">
-            <div className="container mt-3">
-                <div className="row align-items-center">
-                    <div className="col-auto">
-                        <img src="images/logo.png" width="400" />
-                    </div>
-
-                    <div className="col">
-                        <nav className="nav justify-content-end py-3 px-3 rounded">
-                            <a className="nav-link active" href="/">HOME</a>
-                            <a className="nav-link" href="#">SERVICES</a>
-                            <a className="nav-link" href="/about">ABOUT US</a>
-                            <a className="nav-link" href="/contact">CONTACT US</a>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-
+        <div className="bg-main-background">
+            <Navigation />
             <div className="container mt-5">
                 <div className="row g-4 mt-5">
                     {/* Mission Card */}

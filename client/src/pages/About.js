@@ -1,6 +1,5 @@
-import React from 'react';
+import Navigation from '../components/Navigation';
 import Carousel from 'react-bootstrap/Carousel'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const teamMembers = [
     {
@@ -49,25 +48,12 @@ const teamMembers = [
 
 function About() {
     return (
-        <div className="container mt-3">
-            <div className="row align-items-center">
-                <div className="col-auto">
-                    <img src="/images/logo.png" width="400" alt="Logo" />
-                </div>
-                <div className="col">
-                    <nav className="nav justify-content-end py-3 px-4 rounded">
-                        <a className="nav-link" href="/">HOME</a>
-                        <a className="nav-link" href="#">SERVICES</a>
-                        <a className="nav-link active" href="/about">ABOUT US</a>
-                        <a className="nav-link" href="/contact">CONTACT US</a>
-                    </nav>
-                </div>
-            </div>
-
+        <div className="bg-main-background">
+            <Navigation />
             <div className="container d-flex flex-column align-items-center justify-content-center">
                 <h1 className="m-4">Meet the Visionaries Behind Yvette</h1>
                 {/* Team Carousel */}
-                <div style={{ maxWidth: 500}}>
+                <div style={{ maxWidth: 500 }}>
                     <Carousel>
                         {teamMembers.map((member, idx) => (
                             <Carousel.Item key={idx}>
@@ -93,7 +79,7 @@ function About() {
                     Discover our mission, vision, and team - watch our story unfold in the video below!
                 </p>
                 <div className="ratio ratio-16x9 mb-4" style={{ maxWidth: 800, width: '100%' }}>
-                    <video controls>
+                    <video controls className="rounded-4">
                         <source src="/images/about.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
